@@ -1,0 +1,16 @@
+.container {
+  width: 500px;
+  height: 500px;
+
+  border: 1px dotted black;
+
+  resize: both;
+  overflow: auto;
+}
+
+.ex {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
