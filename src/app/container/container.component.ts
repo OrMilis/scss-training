@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { interval, map, Observable } from 'rxjs';
 
-export const colorNames: string[] = ['primary', 'secondary', 'tertiary'];
+export const colorNames: string[] = [];
 export type Colors = typeof colorNames[number];
 
 @Component({
@@ -18,11 +18,7 @@ export class ContainerComponent implements OnInit {
   typingText = `Hello, I'm typing text!`;
   typingObs$!: Observable<number>;
 
-  colors: Record<Colors, string[]> = {
-    primary: [],
-    secondary: [],
-    tertiary: [],
-  };
+  colors: Record<Colors, string[]> = {};
 
   colorNames = colorNames;
 
