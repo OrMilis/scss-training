@@ -1,0 +1,26 @@
+@use './functions.scss' as *;
+
+@mixin all-colors($pallete) {
+
+    @debug $pallete;
+
+    @each $color-name,
+    $color-value in $pallete {
+        @for $weight from 1 to 10 {
+            #{color-var-name($color-name,$weight * 100)}: opacity-color($color-value, $weight / 10);
+        }
+    }
+}
+
+@mixin empty-state($message) {
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 50vh;
+    overflow: hidden;
+
+    @extend %div-style;
+
+    &::before {
+        content: $message;
+    }
+}
