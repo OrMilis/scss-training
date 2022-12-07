@@ -1,2 +1,103 @@
 .ex-2 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2fr 2fr;
+}
+
+.color-list {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.zone-1 {
+    grid-column: 1;
+    grid-row: 1/4;
+    overflow: auto;
+}
+
+.zone-1 li {
+    margin-bottom: 1rem;
+}
+
+.zone-2 {
+    grid-column: 2;
+    grid-row: 1;
+    display: inline-flex;
+    overflow: auto;
+}
+
+.zone-2>ul {
+    min-width: 150%;
+    padding-right: 1rem;
+    display: inline-flex;
+    overflow: visible;
+    height: fit-content;
+}
+
+.zone-2 li {
+    margin-right: 1rem;
+}
+
+.zone-3 {
+    grid-column: 2;
+    grid-row: 2/3;
+    display: flex;
+    overflow: hidden;
+}
+
+.zone-3>ul {
+    overflow-y: auto;
+}
+
+.zone-4 {
+    grid-column: 2;
+    grid-row: 3/4;
+    display: inline-flex;
+    overflow: auto;
+}
+
+.zone-4>ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+}
+
+.square,
+.rectengle {
+    position: relative;
+    width: 100%;
+}
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.big-square {
+    height: fit-content;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    margin: 0px;
+}
+
+.small-square {
+    grid-area: auto;
+    margin: 0px;
+}
+
+.rectengle:after {
+    content: "";
+    display: block;
+    padding-bottom: 50%;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: gray;
 }

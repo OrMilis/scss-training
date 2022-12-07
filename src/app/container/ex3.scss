@@ -1,2 +1,9 @@
+@use './mixins.scss' as *;
+
+%div-style {
+    border: solid 1px red
+}
+
 .ex-3 {
+    @include empty-state(attr(message));
 }
