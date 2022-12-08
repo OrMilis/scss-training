@@ -4,16 +4,21 @@
     grid-template-rows: 1fr 2fr 2fr;
 }
 
+.zone {
+    overflow: auto;
+}
+
+
 .color-list {
     width: 100%;
     list-style: none;
     padding: 0;
+    overflow: auto;
 }
 
 .zone-1 {
     grid-column: 1;
     grid-row: 1/4;
-    overflow: auto;
 }
 
 .zone-1 li {
@@ -24,14 +29,12 @@
     grid-column: 2;
     grid-row: 1;
     display: inline-flex;
-    overflow: auto;
 }
 
 .zone-2>ul {
     min-width: 150%;
     padding-right: 1rem;
     display: inline-flex;
-    overflow: visible;
     height: fit-content;
 }
 
@@ -43,18 +46,12 @@
     grid-column: 2;
     grid-row: 2/3;
     display: flex;
-    overflow: hidden;
-}
-
-.zone-3>ul {
-    overflow-y: auto;
 }
 
 .zone-4 {
     grid-column: 2;
     grid-row: 3/4;
     display: inline-flex;
-    overflow: auto;
 }
 
 .zone-4>ul {
@@ -69,12 +66,6 @@
     width: 100%;
 }
 
-.square:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-}
-
 .big-square {
     height: fit-content;
     grid-column: 1/3;
@@ -85,6 +76,12 @@
 .small-square {
     grid-area: auto;
     margin: 0px;
+}
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
 }
 
 .rectengle:after {

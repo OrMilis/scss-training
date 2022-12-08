@@ -17,7 +17,6 @@ export type Colors = typeof colorNames[number];
 export class ContainerComponent implements OnInit {
   typingText = `Hello, I'm typing text!`;
   typingObs$!: Observable<number>;
-
   colors: Record<Colors, string[]> = {
     ["fuchsia"]: [],
     ["hot-pink"]: [],
@@ -37,6 +36,7 @@ export class ContainerComponent implements OnInit {
       );
     });
   }
+
   ngOnInit(): void {
   }
 }

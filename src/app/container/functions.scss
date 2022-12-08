@@ -1,7 +1,7 @@
 @use './variables.scss' as vars;
 
 @function opacity-color($color, $opacity) {
-    @if $opacity < 0 or $opacity >1 {
+    @if $opacity<0 or $opacity>1 {
         @error "opacity must be in rang 0-1";
     }
 

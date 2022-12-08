@@ -1,7 +1,6 @@
 @use './functions.scss' as *;
 
 @mixin all-colors($pallete) {
-
     @debug $pallete;
 
     @each $color-name,
@@ -17,7 +16,6 @@
     font-size: xx-large;
     padding-top: 50vh;
     overflow: hidden;
-
     @extend %div-style;
 
     &::before {
